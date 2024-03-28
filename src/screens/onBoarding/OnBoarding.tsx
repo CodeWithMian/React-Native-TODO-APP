@@ -1,12 +1,18 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
 import {
   DarkSideThree,
   LightSideOne,
   LightSideTwo,
   Taski,
 } from '../../assets/constants/constants';
-import Inter from '../../assets/fonts/Inter-ExtraBold.ttf';
 
 const OnBoarding = () => {
   return (
@@ -26,6 +32,14 @@ const OnBoarding = () => {
             Join us now and get your daily things right
           </Text>
         </View>
+      </View>
+      <View style={style.buttons}>
+        <TouchableOpacity style={style.button} activeOpacity={0.7}>
+          <Text style={style.buttonText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={style.buttonRegister} activeOpacity={0.7}>
+          <Text style={style.registerText}>Register</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -58,7 +72,7 @@ const style = StyleSheet.create({
   taski: {
     width: 335,
     height: 208,
-    top: 230,
+    top: 220,
     left: 20,
     justifyContent: 'center',
     alignItems: 'center',
@@ -72,7 +86,7 @@ const style = StyleSheet.create({
     color: '#0B0A11',
     fontSize: 24,
     textAlign: 'center',
-    fontFamily: 'Inter-ExtraBold',
+    fontFamily: 'Inter-Bold',
     lineHeight: 32,
     top: 10,
   },
@@ -80,8 +94,45 @@ const style = StyleSheet.create({
     color: 'rgba(11, 10, 17, 0.7)',
     fontSize: 14,
     textAlign: 'center',
-    lineHeight: 18,
+    lineHeight: 28,
     top: 10,
+    fontFamily: 'Inter-Light',
+  },
+  buttons: {
+    width: 335,
+    height: 312,
+    justifyContent: 'center',
+    left: 25,
+    top: 80,
+    gap: 15,
+  },
+  button: {
+    width: 335,
+    height: 48,
+    backgroundColor: 'rgba(126, 187, 79, 1)',
+    color: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    textAlign: 'center',
+    fontFamily: 'Inter-Bold',
+  },
+  buttonRegister: {
+    width: 335,
+    height: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(126, 187, 79, 1)',
+  },
+  registerText: {
+    color: 'rgba(126, 187, 79, 1)',
+    fontSize: 16,
+    textAlign: 'center',
+    fontFamily: 'Inter-Bold',
   },
 });
 
