@@ -7,14 +7,14 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import {LeftIcon} from '../../../assets/constants/constants';
+import {LeftIcon} from '../../assets/constants/constants';
 
-const Register = () => {
+const Login = () => {
   return (
     <View style={style.main}>
       <View>
         <Image source={LeftIcon} style={style.img} />
-        <Text style={style.h1}>Register</Text>
+        <Text style={style.h1}>Login</Text>
       </View>
       <View style={style.mainBody}>
         <Text style={style.h2}>Join us today.</Text>
@@ -47,7 +47,7 @@ const Register = () => {
         </View>
         <View style={style.buttons}>
           <TouchableOpacity style={style.button} activeOpacity={0.7}>
-            <Text style={style.buttonText}>Register</Text>
+            <Text style={style.buttonText}>Login</Text>
           </TouchableOpacity>
           <Text style={style.text}>Don't have an Account? Register</Text>
         </View>
@@ -155,9 +155,8 @@ const style = StyleSheet.create({
     fontSize: 14,
     fontFamily: 'Inter-Regular',
     lineHeight: 24,
-    top: 70,
-    left: 20,
+    left: 50,
   },
 });
 
-export default Register;
+export default Login;
