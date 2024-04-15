@@ -156,6 +156,7 @@ const style = StyleSheet.create({
     fontFamily: 'Inter-Regular',
     lineHeight: 24,
     left: 50,
+    top: 0,
   },
 });
 
